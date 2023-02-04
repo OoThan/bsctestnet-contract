@@ -44,7 +44,8 @@
 // require('dotenv').config();
 // const { MNEMONIC, PROJECT_ID } = process.env;
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+const privateKeys = ['0x05f34f535216fba01117c8451ec3b89e66eb844552af1762e0110a09f884fe18'];
 
 module.exports = {
   /**
@@ -96,6 +97,41 @@ module.exports = {
     //   network_id: 2111,   // This network is yours, in the cloud.
     //   production: true    // Treats this network as if it was a public net. (default: false)
     // }
+
+    eth: {
+      provider: () => new HDWalletProvider(
+          privateKeys,
+          'ETH_NODE_URL',
+      ),
+      network_id: 1,
+      skipDryRun: true,
+    },
+    ethTestnet: {
+      provider: () => new HDWalletProvider(
+          privateKeys,
+          'ETH_NODE_URL',
+      ),
+      network_id: 5,
+      skipDryRun: true,
+    },
+
+    bsc: {
+      provider: () => new HDWalletProvider(
+          privateKeys,
+          'https://bsc-dataseeed.binance.org/',
+      ),
+      network_id: 56,
+      skipDryRun: true,
+    },
+    bscTestnet: {
+      provider: () => new HDWalletProvider(
+          privateKeys,
+          'https://data-seed-prebsc-1-s1.binance.org:8545',
+      ),
+      network_id: 97,
+      skipDryRun: true,
+    }
+
   },
 
   // Set default mocha options here, use special reporters, etc.
