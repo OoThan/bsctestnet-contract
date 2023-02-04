@@ -1,0 +1,7 @@
+{
+  "name": "bsctestnet-contract",
+  "version": "1.0.0",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.6"
+  }
+}
