@@ -2,6 +2,8 @@
   "name": "bsctestnet-contract",
   "version": "1.0.0",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^2.1.6"
+    "@openzeppelin/contracts": "^4.8.1",
+    "@truffle/hdwallet-provider": "^2.1.6",
+    "openzeppelin-solidity": "^3.4.2"
   }
 }
