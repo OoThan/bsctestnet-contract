@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT license
 pragma solidity >=0.4.25 <0.9.0;
 
 contract Migrations {
